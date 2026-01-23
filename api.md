@@ -2,7 +2,7 @@
 
 ### Request
 
-Method GET
+GET /api/delivery
 
 url: https://petrushka.ru/api/delivery?address=ул+ленина+67
 
