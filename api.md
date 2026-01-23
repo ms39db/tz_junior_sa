@@ -3,59 +3,66 @@
 ### Request
 
 Method GET
-url: "string"
-host: "string"
+
+url: https://petrushka.ru/api/delivery?address=ул+ленина+67
 
 headers:
-conten-type: application/json
 
-body:
-```json
-{
-  "address": "string"
-}
-```
+content-type: application/json
+
 
 ### Response
 
 status: 200
 
 headers:
-conten-type: application/json
+content-type: application/json
 
 body:
 ```json
 {
   "status": "ok",
-  "address": "string",
+  "address": "ул Ленина 67",
   "data": [ 
       {
-        "name": "Metro",
+        "name": "metro",
         "logo": "string",
         "url": "string",
-        "fast_delivery": false,
-        "delivert_time": "timestamp"
+        "delivery_time": {
+          "fast_delivery": false,
+          "delivery_time_frrom": "2026-01-22T21:00:00",
+          "delivery_time_to": "2026-01-22T23:00:00"
+        }
       },
       {
         "name": "ashan",
         "logo": "string",
         "url": "string",
-        "fast_delivery": false,
-        "delivert_time": "timestamp"
+        "delivery_time": {
+          "fast_delivery": false,
+          "delivery_time_frrom": "2026-01-22T19:00:00",
+          "delivery_time_to": "2026-01-22T20:00:00"
+        }
       },
       {
         "name": "vkusvill",
         "logo": "string",
         "url": "string",
-        "fast_delivery": false,
-        "delivert_time": "timestamp"
+        "delivery_time": {
+          "fast_delivery": true,
+          "min_time": 20,
+          "max_time": 60
+        }
       },
       {
         "name": "viktoria",
         "logo": "string",
         "url": "string",
-        "fast_delivery": false,
-        "delivert_time": "timestamp"
+        "delivery_time": {
+          "fast_delivery": false,
+          "delivery_time_frrom": "2026-01-22T17:00:00",
+          "delivery_time_to": "2026-01-22T19:00:00"
+        }
       }
     ]
 }
